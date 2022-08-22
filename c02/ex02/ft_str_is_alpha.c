@@ -3,27 +3,25 @@
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
-	int	count_no_alpha;
-	char	aux;
 
-	count_no_alpha = 0;
 	i = 0;
+	if (str[i] == '\0')
+		return (1);
 	while (str[i] != '\0')
 	{
-		aux = str[i];
-		if (!(((aux >= 'A') && (aux <= 'Z')) || ((aux >= 'a') && (aux <= 'z'))))
-			count_no_alpha++;
-		i++;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			i++;
+		else if (str[i] >= 'a' && str[i] <= 'z')
+			i++;
+		else
+			return (0);
 	}
-	if (count_no_alpha == 0 || i == 0)
-		return (1);
-	else
-		return (0);
+	return (1);
 }
 
 int	main()
 {
-	char str[5] = "as2Sk";
+	char str[5] = "qq!e";
 	printf(":%s:\n", str);
 	printf("%d\n", ft_str_is_alpha(str));
 
