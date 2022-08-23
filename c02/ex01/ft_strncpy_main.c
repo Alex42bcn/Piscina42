@@ -10,7 +10,6 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
 	while (i < n)
 	{
 		dest[i] = '\0';
@@ -21,12 +20,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 int	main()
 {
-	char src[] = "helloWorld1";
-	char dest[5] = ".....";
+	char src[] = "abc";
+	char dest[] = "chararray";
 	printf(":%s:\n", src);
 	printf(":%s:\n", dest);
-	ft_strncpy(dest, src,  2);
-	printf(":%s:\n", dest);
+	//ft_strncpy(dest, src, 6);
+	printf(":%s:\n", ft_strncpy(dest, src, 2));
 
 	return (0);
 }

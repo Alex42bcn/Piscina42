@@ -17,7 +17,7 @@ int	main()
 
 	char *str;
 
-	str = "hello es una prueba";
+	str = "hello_";
 	//ft_strlen(str);
 	printf("%d\n", ft_strlen(str));
 
