@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void	ft_putstr_non_printable(char *str)
+void *ft_print_memory(void *addr, unsigned int size)
 {
 
 
