@@ -19,18 +19,20 @@ char	*ft_strcat(char *dest, char *src)
 	i = 0;
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-	while (i < src_len)
+	if (dest_len >= dest_len + src_len)
 	{
-		dest[i + dest_len] = src[i];
-		i++;
+		while (i < src_len)
+		{
+			dest[i + dest_len] = src[i];
+			i++;
+		}
 	}
-	dest[i + dest_len] = '\0';
 	return (dest);
 }
 
 int	main()
 {
 	char	src[] = "Benguerir";
-	char	dest[] = "1337 ";
+	char	dest[20] = "1337          ";
 	printf("%s", ft_strcat(dest, src));
 }
