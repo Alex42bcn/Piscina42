@@ -6,38 +6,26 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 18:13:45 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 18:31:48 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 19:41:20 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
 int	ft_check_base(char *str)
 {
 	int	i;
 	int	j;
-	int	lenstr;
 
 	i = 0;
-	lenstr = ft_strlen(str);
-	if (lenstr == 0 || lenstr == 1)
+	if (str[0] != '\0' || str[1] != '\0')
 		return (1);
 	while (str[i] != '\0')
 	{
 		if (str[i] == '+' || str[i] == '-' || str[i] <= 32 || str[i] == 127)
 			return (1);
 		j = i + 1;
-		while (j < lenstr)
+		while (str[j] != '\0')
 		{
 			if (str[i] == str[j])
 				return (1);
