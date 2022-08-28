@@ -1,2 +1,2 @@
-#! \bin\sh
-id $FT_USER -G -n | tr " " "," | tr -d "\n" 
+#! /bin/sh
+id -G -n $FT_USER | tr " " "," | tr -d '\n' 

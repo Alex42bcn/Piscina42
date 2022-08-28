@@ -1,0 +1,10 @@
+.gitignore
+.DS_Store
+*test.c
+*test*.c
+*test*.sh
+*test.sh
+*test?.*
+a.out
+*_main.c
+*.pdf
