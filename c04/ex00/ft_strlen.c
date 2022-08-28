@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:13:15 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:15:28 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 16:15:40 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int main()
+/*int main()
 {
 
 	char	octo[] = "El octo ha sido secuestrado";
 	printf("Lenght is: %d\n", ft_strlen(octo));
 
 	return (0);
-}
+}*/

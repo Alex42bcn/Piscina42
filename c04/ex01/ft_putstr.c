@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen_main.c                                   :+:      :+:    :+:   */
+/*   ft_putstr_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 16:13:15 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:15:28 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/28 16:16:52 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/28 16:18:32 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include<unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putchar(char c)
+{
+	write (1, &c, 1);
+}
+
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
 		i++;
-	return (i);
+	}
 }
 
-int main()
+/*int main()
 {
-
-	char	octo[] = "El octo ha sido secuestrado";
-	printf("Lenght is: %d\n", ft_strlen(octo));
+	char	str[] = "Hello new language";
+	ft_putstr(str);
 
 	return (0);
-}
+}*/

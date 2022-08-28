@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:21:10 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:21:29 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 16:21:58 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ int	ft_atoi(char *str)
 	return (numb);
 }
 
-int	main()
+/*int	main()
 {
 	char	s[] = "  	 ---+--+01234567890abABZa234";
 
 	printf("%d", ft_atoi(s));
-}
+}*/

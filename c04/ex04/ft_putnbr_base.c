@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:23:09 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:23:12 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:13:00 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 }
 
-int	main()
+/*int	main()
 {
 	ft_putnbr_base(-12, "01");
 	printf("\n");
@@ -86,4 +86,4 @@ int	main()
 	printf("\n");
 	ft_putnbr_base(53, "0123456789abcdef");
 	return (0);
-}
+}*/
