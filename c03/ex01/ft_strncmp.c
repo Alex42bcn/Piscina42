@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 15:16:58 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 15:17:04 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 15:17:52 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (s1[i] - s2[i]);
 }
 
-int	main()
+/*int	main()
 {
 	char	s1[] = "gtg9sde";
 	char	s2[] = "gtg2sed";
@@ -44,4 +44,4 @@ int	main()
 	printf("El valor de la comparacion: %d\n", ft_strncmp(s5, s6, 4));
 
 	return (0);
-}
+}*/
