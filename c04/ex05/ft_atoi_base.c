@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 18:13:45 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 21:59:34 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 22:00:26 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,10 @@ int	ft_atoi_base(char *str, char *base)
 	return (0);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	printf("%d\n", ft_atoi_base("	+++++--133742", "0123456789"));
 	printf("%d\n", ft_atoi_base("	     ---101010", "01"));
 	printf("%d\n", ft_atoi_base(" 	+---539", "0123456789abcdef"));
 	return (0);
-}
+}*/
