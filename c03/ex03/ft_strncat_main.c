@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat_main.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/28 15:57:54 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/28 16:03:54 by apicanyo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include<stdio.h>
 
 int	ft_strlen(char *str)
@@ -13,8 +25,8 @@ int	ft_strlen(char *str)
 char    *ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
-	int	dest_len;
-	int	src_len;
+	int				dest_len;
+	int				src_len;
 
 	i = 0;
 	dest_len = ft_strlen(dest);

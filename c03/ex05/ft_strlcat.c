@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:07:20 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:09:40 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 16:09:19 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (dstsize);
 }
 
-int	main()
+/*int	main()
 {
-	/*char	first[] = "This is ";
+	//char	first[] = "This is ";
 	char	last[] = "a potentially long string";
 	unsigned int	r;
 	unsigned int	size;
@@ -62,11 +62,11 @@ int	main()
 
 	printf("Value returned: %d\n",r);
 
-	printf("%s\n", first);*/
+	printf("%s\n", first);//
 
 	char src[] = "a potencially long string";
 	char dest [] = "This is ";
 	printf("%i \n", ft_strlcat(dest, src, 35));
 	printf("%s \n", dest);
 	return (0);
-}
+}*/

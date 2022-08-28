@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:04:30 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:06:24 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/28 16:06:36 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strstr(char *str, char *to_find)
 	return (0);
 }
 
-int	main()
+/*int	main()
 {
 	char	haystack[] = "TutorialsPoint y sol";
 	char	needle[] = "Point";
@@ -44,4 +44,4 @@ int	main()
 	printf("The substring is: %s\n", ft_strstr(haystack, needle));
 
 	return (0);
-}
+}*/

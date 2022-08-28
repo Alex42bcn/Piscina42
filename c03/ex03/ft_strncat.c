@@ -1,47 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr_main.c                                   :+:      :+:    :+:   */
+/*   ft_strncat_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 16:04:30 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:06:24 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/28 15:57:54 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/28 16:03:38 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_strlen(char *str)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	if (to_find[0] == '\0')
-		return (str);
 	while (str[i] != '\0')
-	{
-		while (str[i + j] != '\0' && str[i + j] == to_find[j])
-		{
-			if (to_find[j + 1] == '\0')
-				return (str + i);
-			++j;
-		}
-		++i;
-	}
-	return (0);
+		i++;
+	return (i);
 }
 
-int	main()
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char	haystack[] = "TutorialsPoint y sol";
-	char	needle[] = "Point";
-	char	*ret;
-	
-	ret = ft_strstr(haystack, needle);
-	printf("The substring is: %s\n", ft_strstr(haystack, needle));
+	unsigned int	i;
+	int				dest_len;
+	int				src_len;
 
-	return (0);
+	i = 0;
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	while (i < nb)
+	{
+		dest[i + dest_len] = src[i];
+		i++;
+	}
+	dest[i + dest_len] = '\0';
+	return (dest);
 }
+
+/*int	main()
+{
+	char	src[] = "Benguerir";
+	char	dest[] = "1337 ";
+	printf("%s", ft_strncat(dest, src, 3));
+}*/
