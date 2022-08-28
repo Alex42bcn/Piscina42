@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 23:20:19 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 23:23:48 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:06:10 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@ int	ft_iterative_factorial(int nb)
 {
 	int	result;
 
+	result = 1;
 	if (nb < 1)
 		return (0);
-	else if (nb == 1)
+	if (nb == 1)
 		return (1);
-	else
-	{
-		result = nb * (ft_iterative_factorial(nb - 1));
-		return (result);
-	}	
+	while (nb > 1)
+	{	
+		result *= nb;
+		nb--;
+	}
+	return (result);
 }
 
 /*int	main(void)
