@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 09:24:37 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/29 11:08:44 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/29 12:01:40 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 	int	index;
 	int	result;
 
-	index = 7;
+	index = 8;
 	result = ft_fibonacci(index);
 	printf("%d\n", result);
 	return (0);
