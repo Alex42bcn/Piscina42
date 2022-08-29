@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable_main.c                     :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 14:57:13 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 14:58:19 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/29 20:00:49 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/29 20:01:20 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int	ft_char_is_printable(char c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
-	return (0);
+	else
+		return (0);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -32,7 +33,7 @@ void	ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((ft_char_is_printable(str[i])) == 1)
+		if (ft_char_is_printable(str[i]) == 1)
 			ft_putchar(str[i]);
 		else
 		{
@@ -44,13 +45,12 @@ void	ft_putstr_non_printable(char *str)
 	}
 }
 
-/*int	main()
+/*int	main(void)
 {
 	ft_putstr_non_printable("Coucou\ntu vas bien");
 	ft_putchar('\n');
 	ft_putstr_non_printable("Coucou tu vas bie\t\v\0n");
 	ft_putchar('\n');
 	ft_putstr_non_printable("");
-
-	return(0);
+	return (0);
 }*/

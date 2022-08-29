@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod_main.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 13:53:32 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 14:15:04 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/29 20:08:55 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/29 20:42:19 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	temp_a = *a;
 	temp_b = *b;
 	*a = temp_a / temp_b;
-	*b = temp_b % temp_b;
+	*b = temp_a % temp_b;
 }
 
-int main()
+int	main(void)
 {
 	int	a;
 	int	b;
