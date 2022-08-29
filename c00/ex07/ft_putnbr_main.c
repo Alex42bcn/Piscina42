@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_main.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/29 15:26:03 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/29 15:26:56 by apicanyo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include<stdio.h>
 #include<unistd.h>
 
@@ -29,7 +41,7 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 }
 
-int	 main()
+int	main(void)
 {
 	ft_putnbr(-2147483648);
 	printf("\n");
@@ -42,6 +54,5 @@ int	 main()
 	ft_putnbr(-2147483647);
 	printf("\n");
 	ft_putnbr(2147483647);
-
 	return (0);
 }
