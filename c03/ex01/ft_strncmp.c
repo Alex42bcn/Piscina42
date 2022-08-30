@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 03:13:22 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/30 03:15:10 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/30 10:59:57 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/30 11:00:55 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != 0 && i < n)
-	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-			break ;
-		}
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i] && (i < n - 1) && s1[i])
 		i++;
-	}
-	if (i != n)
-		return (s1[i] - s2[i]);
-	return (0);
+	return (s1[i] - s2[i]);
 }
 
 /*int	main(void)

@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 15:16:58 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/30 10:59:08 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/30 10:49:45 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,17 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (s1[i] == s2[i] && (i < n - 1) && s1[i])
+	while (s1[i] != '\0' && s2[i] != 0 && (i < n - 1))
+	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+			break ;
+		}
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	if (i != n)
+		return (s1[i] - s2[i]);
 }
 
 int	main(void)
