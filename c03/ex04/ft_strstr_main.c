@@ -6,10 +6,11 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:04:30 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:06:24 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/30 04:07:39 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<string.h>
 #include<stdio.h>
 
 char	*ft_strstr(char *str, char *to_find)
@@ -34,14 +35,13 @@ char	*ft_strstr(char *str, char *to_find)
 	return (0);
 }
 
-int	main()
+int	main(void)
 {
 	char	haystack[] = "TutorialsPoint y sol";
 	char	needle[] = "Point";
 	char	*ret;
-	
 	ret = ft_strstr(haystack, needle);
-	printf("The substring is: %s\n", ft_strstr(haystack, needle));
-
+	//printf("The substring is: %s", ft_strstr(haystack, needle));
+	printf("The substring is:%s", strstr(haystack, needle));
 	return (0);
 }

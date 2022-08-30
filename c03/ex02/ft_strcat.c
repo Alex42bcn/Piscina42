@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat_main.c                                   :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 15:55:52 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 15:57:15 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/30 03:33:09 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/30 03:33:33 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<string.h>
 #include<stdio.h>
 
 int	ft_strlen(char *str)
@@ -40,9 +41,14 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-/*int	main()
+/*int	main(void)
 {
-	char	src[] = "Benguerir";
-	char	dest[] = "1337 ";
-	printf("%s", ft_strcat(dest, src));
+	char	src[50] = "Benguerir";
+	char	dest[50] = "1337 ";
+	printf("%s\n", ft_strcat(dest, src));
+	strcat(dest, src);
+	printf("Final destination string : |%s|", dest);
+	strcat(dest, src);
+	printf("Final destination string : |%s|", dest);	
+	return (0);
 }*/

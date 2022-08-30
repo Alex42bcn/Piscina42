@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat_main.c                                  :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 16:07:20 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:09:19 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/30 10:29:56 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/30 10:32:49 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<string.h>
 #include<stdio.h>
 
 int	ft_strlen(char *str)
@@ -32,7 +33,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-	dstsize = dest_len + src_len;
+	dstsize = dest_len - 1;
 	i = dest_len;
 	j = 0;
 	if (size == 0 || size <= dest_len)
@@ -47,7 +48,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (dstsize);
 }
 
-/*int	main()
+/*int	main(void)
 {
 	//char	first[] = "This is ";
 	char	last[] = "a potentially long string";
@@ -64,9 +65,10 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 	printf("%s\n", first);//
 
-	char src[] = "a potencially long string";
-	char dest [] = "This is ";
-	printf("%i \n", ft_strlcat(dest, src, 35));
+	char src[25] = "a potencially long string";
+	char dest [50] = "This is ";
+	//printf("%i \n", ft_strlcat(dest, src, 35));
+	strlcat(dest, src, 34);
 	printf("%s \n", dest);
 	return (0);
 }*/

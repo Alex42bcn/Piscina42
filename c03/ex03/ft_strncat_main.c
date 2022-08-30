@@ -6,10 +6,11 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 15:57:54 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:03:54 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/30 03:59:58 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<string.h>
 #include<stdio.h>
 
 int	ft_strlen(char *str)
@@ -22,7 +23,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char    *ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
 	int				dest_len;
@@ -40,9 +41,11 @@ char    *ft_strncat(char *dest, char *src, unsigned int nb)
 	return (dest);
 }
 
-int	main()
+int	main(void)
 {
-	char	src[] = "Benguerir";
-	char	dest[] = "1337 ";
-	printf("%s", ft_strncat(dest, src, 3));
+	char	src[25] = "Benguerir";
+	char	dest[25] = "1337 ";
+	//printf("%s", ft_strncat(dest, src, 5));
+	printf("%s", strncat(dest, src, 5));
+	return (0);
 }
