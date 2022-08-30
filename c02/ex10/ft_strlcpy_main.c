@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 14:52:51 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 14:53:56 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/29 21:08:25 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (src_len);
 }
 
-int	main()
+int	main(void)
 {
 	char	src[] = "Holland";
 	char	dest[] = "worz12346";
+
 	printf(":%s:\n", src);
 	printf(":%s:\n", dest);
 	printf(":%d:\n", ft_strlcpy(dest, src, 3));
 	printf(":%s:\n", dest);
-
 	return (0);
 }
