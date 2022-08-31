@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 14:27:52 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/31 14:29:03 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/31 16:39:46 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	j = 0;
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-	if (size > 1)
+	if (size < 1)
 		return (src_len + size);
 	while (src[j] && i < size -1)
 	{
