@@ -6,77 +6,61 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:23:09 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/30 11:36:33 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:42:44 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putnbr_base_rec(int nbr, char *base, int size)
 {
-	write (1, &c, 1);
-}
+	unsigned int	n;
+	char			a;
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	ft_check_base(char *str)
-{
-	int	i;
-	int	j;
-	int	lenstr;
-
-	i = 0;
-	lenstr = ft_strlen(str);
-	if (lenstr == 0 || lenstr == 1)
-		return (1);
-	while (str[i] != '\0')
+	if (nbr < 0)
 	{
-		if (str[i] == '+' || str[i] == '-' || str[i] <= 32 || str[i] == 127)
-			return (1);
-		j = i + 1;
-		while (j < lenstr)
-		{
-			if (str[i] == str[j])
-				return (1);
-			j++;
-		}
+		write(1, "-", 1);
+		n = nbr * (-1);
+	}
+	else
+		n = nbr;
+	if (n >= (unsigned int)size)
+		ft_putnbr_base_rec(n / size, base, size);
+	a = base[n % size];
+	write(1, &a, 1);
+}
+
+int	ft_ver_bas(char *base)
+{
+	int	i;
+
+	i = 0;
+	while (base[i] != '\0')
+	{
+		if (base[i] == '+' || base[i] == '-' || base[i] == base[i + 1])
+			return (0);
 		i++;
 	}
-	return (0);
+	if (i <= 1)
+		return (0);
+	return (1);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int	len_base;
+	int	s;
 
-	len_base = ft_strlen(base);
-	if (ft_check_base(base) == 0)
+	s = 0;
+	if (ft_ver_bas(base) == 1)
 	{
-		if (nbr < 0)
-		{
-			nbr *= -1;
-			ft_putchar('-');
-		}
-		if (nbr < len_base)
-			ft_putchar(base[nbr]);
-		if (nbr >= len_base)
-		{
-			ft_putnbr_base((nbr / len_base), base);
-			ft_putnbr_base((nbr % len_base), base);
-		}
+		while (base[s] != '\0')
+			s++;
+		ft_putnbr_base_rec(nbr, base, s);
 	}
 }
 
-int	main()
+int	main(void)
 {
 	ft_putnbr_base(-12, "01");
 	printf("\n");

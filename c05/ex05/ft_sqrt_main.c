@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:11:35 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/31 15:33:48 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/31 18:01:12 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 int	ft_sqrt(int nb)
 {
-	int	i;
+	int	n;
 
-	i = 1;
-	if (nb == 0)
-		return (0);
-	while ((i * i) < nb)
-		i++;
-	if ((nb % i) == 0)
-		return (i);
-	else
-		return (0);
+	n = 1;
+	if (nb > 0)
+	{
+		while (n * n <= nb)
+		{
+			if (n * n == nb)
+				return (n);
+			else if (n >= 46341)
+				return (0);
+			n++;
+		}
+	}
+	return (0);
 }
 
 int	main(void)
