@@ -6,10 +6,26 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 01:50:49 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/31 02:19:19 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/09/01 01:51:56 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio>
+#include<unistd.h>
 
-int main(int av, char **arg:
+int	main(int av, char **arg)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	if (ac > 0)
+	{	
+		while (arg [0][i] != '\0')
+		{	
+			write(1, &arg[0][i], 1);
+			i++;
+		}
+	}
+	write(1, "\n", 1);
+	return (0);
+}
