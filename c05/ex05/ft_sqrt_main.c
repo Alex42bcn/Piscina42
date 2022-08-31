@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:11:35 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/30 19:59:30 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:33:48 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,15 @@ int	ft_sqrt(int nb)
 {
 	int	i;
 
-	if (nb <= 0)
-	{
+	i = 1;
+	if (nb == 0)
 		return (0);
-	}
-	if (nb == 1)
-	{
-		return (1);
-	}
-	i = 2;
-	if (nb >= 2)
-	{
-		while (i * i <= nb)
-		{
-			if (i * i == nb)
-			{
-				return (i);
-			}
-			i++;
-		}
-	}
-	return (0);
+	while ((i * i) < nb)
+		i++;
+	if ((nb % i) == 0)
+		return (i);
+	else
+		return (0);
 }
 
 int	main(void)
@@ -45,6 +33,7 @@ int	main(void)
 	printf("sqrt of %d is %d\n", 0, ft_sqrt(0));
 	printf("sqrt of %d is %d\n", 1, ft_sqrt(1));
 	printf("sqrt of %d is %d\n", 2, ft_sqrt(2));
+	printf("sqrt of %d is %d\n", 25, ft_sqrt(25));
 	printf("sqrt of %d is %d\n", 1640045925, ft_sqrt(1640045925));
 	printf("sqrt of %d is %d\n", 2147395600, ft_sqrt(2147395600));
 	printf("sqrt of %d is %d\n", 20286016, ft_sqrt(20286016));

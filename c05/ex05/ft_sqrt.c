@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 20:00:17 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/30 20:00:34 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/31 15:34:40 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/31 15:35:07 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,15 @@ int	ft_sqrt(int nb)
 {
 	int	i;
 
-	if (nb <= 0)
-	{
+	i = 1;
+	if (nb == 0)
 		return (0);
-	}
-	if (nb == 1)
-	{
-		return (1);
-	}
-	i = 2;
-	if (nb >= 2)
-	{
-		while (i * i <= nb)
-		{
-			if (i * i == nb)
-			{
-				return (i);
-			}
-			i++;
-		}
-	}
-	return (0);
+	while ((i * i) < nb)
+		i++;
+	if ((nb % i) == 0)
+		return (i);
+	else
+		return (0);
 }
 
 /*int	main(void)
@@ -45,6 +33,7 @@ int	ft_sqrt(int nb)
 	printf("sqrt of %d is %d\n", 0, ft_sqrt(0));
 	printf("sqrt of %d is %d\n", 1, ft_sqrt(1));
 	printf("sqrt of %d is %d\n", 2, ft_sqrt(2));
+	printf("sqrt of %d is %d\n", 25, ft_sqrt(25));
 	printf("sqrt of %d is %d\n", 1640045925, ft_sqrt(1640045925));
 	printf("sqrt of %d is %d\n", 2147395600, ft_sqrt(2147395600));
 	printf("sqrt of %d is %d\n", 20286016, ft_sqrt(20286016));
