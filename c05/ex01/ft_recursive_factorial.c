@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 23:36:55 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 23:37:37 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/30 15:16:14 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/30 15:17:01 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_recursive_factorial(int nb)
 {
 	int	result;
 
-	if (nb < 1)
+	if (nb < 0)
 		return (0);
-	else if (nb == 1)
+	else if (nb == 1 || nb == 0)
 		return (1);
 	else
 	{

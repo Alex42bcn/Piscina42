@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_factorial_main.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 23:36:55 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 23:38:34 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/30 13:28:25 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/30 15:15:33 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_recursive_factorial(int nb)
 {
 	int	result;
 
-	if (nb < 1)
+	if (nb < 0)
 		return (0);
-	else if (nb == 1)
+	else if (nb == 1 || nb == 0)
 		return (1);
 	else
 	{

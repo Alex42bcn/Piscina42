@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power_main.c                          :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 00:34:07 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/29 00:37:44 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/30 19:31:44 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/30 19:32:36 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_iterative_power(int nb, int power)
 	result = nb;
 	if (power < 0)
 		return (0);
-	if (power == 0 && nb == 0)
+	if (power == 0)
 		return (1);
 	while (power > 1)
 	{	

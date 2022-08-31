@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci_main.c                                :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 09:24:37 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/29 11:50:16 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/08/30 19:56:29 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/08/30 19:56:59 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_fibonacci(int index)
 	int	index;
 	int	result;
 
-	index = 7;
+	index = 8;
 	result = ft_fibonacci(index);
 	printf("%d\n", result);
 	return (0);
