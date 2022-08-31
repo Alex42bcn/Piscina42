@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:04:30 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/30 04:07:39 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:00:56 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,24 @@ char	*ft_strstr(char *str, char *to_find)
 	int	i;
 	int	j;
 
-	i = 0;
-	j = 0;
-	if (to_find[0] == '\0')
+	if (*to_find == '\0')
 		return (str);
-	while (str[i] != '\0')
+	while (*str != '\0')
 	{
-		while (str[i + j] != '\0' && str[i + j] == to_find[j])
+		if (*str == *to_find)
 		{
-			if (to_find[j + 1] == '\0')
-				return (str + i);
-			++j;
+			i = 0;
+			j = 0;
+			while (to_find[i] != '\0')
+			{
+				if (str[i] != to_find[i])
+					j = 1;
+				i++;
+			}
+			if (j == 0)
+				return (str);
 		}
-		++i;
+		str++;
 	}
 	return (0);
 }

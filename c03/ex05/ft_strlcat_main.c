@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:07:20 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/30 10:29:23 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:26:58 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,26 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
-	unsigned int	dstsize;
 	unsigned int	dest_len;
 	unsigned int	src_len;
 
+	i = ft_strlen(dest);
+	j = 0;
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-	dstsize = dest_len - 1;
-	i = dest_len;
-	j = 0;
-	if (size == 0 || size <= dest_len)
-		return (dstsize);
-	while (j < (size - dest_len - 1) && src[j] != '\0')
+	if (size > 1)
+		return (src_len + size);
+	while (src[j] && i < size -1)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
 	dest[i] = '\0';
-	return (dstsize);
+	if (size < dest_len)
+		return (src_len + size);
+	else
+		return (dest_len + src_len);
 }
 
 int	main(void)
