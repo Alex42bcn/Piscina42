@@ -6,7 +6,7 @@
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:21:10 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/08/28 16:21:29 by apicanyo         ###   ########.fr       */
+/*   Updated: 2022/08/31 21:39:01 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,19 @@ int	ft_spaces_and_sings(char *str, int *ptr_i)
 
 	i = 0;
 	sing = 1;
-	while (str[i] != '0')
+	while (str[i] != '\0')
+	{	
 		if ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 			i++;
-	else if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sing *= -1;
+		else if (str[i] == '-' || str[i] == '+')
+		{	
+			if (str[i] == '-')
+				sing *= -1;
 			i++;
-	}
-	else
-		break ;
+		}
+		else
+			break ;
+	}	
 	*ptr_i = i;
 	return (sing);
 }
@@ -59,7 +61,7 @@ int	ft_atoi(char *str)
 	return (numb);
 }
 
-int	main()
+int	main(void)
 {
 	char	s[] = "  	 ---+--+01234567890abABZa234";
 
