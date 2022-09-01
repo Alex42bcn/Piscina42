@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apicanyo <apicanyo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 01:50:49 by apicanyo          #+#    #+#             */
-/*   Updated: 2022/09/01 17:26:25 by apicanyo         ###   ########.fr       */
+/*   Created: 2022/09/01 13:29:31 by apicanyo          #+#    #+#             */
+/*   Updated: 2022/09/01 13:32:35 by apicanyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,19 @@
 int	main(int ac, char **av)
 {
 	int	i;
+	int	j;
 
-	i = 0;
-	if (ac > 0)
-	{	
-		while (av [0][i] != '\0')
-		{	
-			write(1, &av[0][i], 1);
-			i++;
-		}
+	i = 1;
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j] != '\0')
+		{
+			write (1, &av[i][j], 1);
+			j++;
+		}	
+		write(1, "\n", 1);
+		i++;
 	}
-	write(1, "\n", 1);
 	return (0);
 }
